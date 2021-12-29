@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use \Osms\Osms;
-use Informagenie\OrangeSDK;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 
@@ -38,27 +37,27 @@ class SMSController extends Controller
         }
     }
 
-    public function send(){
-        //Send SMS
-        $credentials = [
-            'client_id' => 'UBBqLQPhYHxUm8PWActauCAdTXJnjAjn',
-            'client_secret' => '0cfg1FtD5HAGKkT2'
-        ];
+    // public function send(){
+    //     //Send SMS
+    //     $credentials = [
+    //         'client_id' => 'UBBqLQPhYHxUm8PWActauCAdTXJnjAjn',
+    //         'client_secret' => '0cfg1FtD5HAGKkT2'
+    //     ];
 
-        /*
-        You can use directly authorization header instead of client_id and client_secret
-        $credentials = [
-            'authorization_header' => 'Basic xxx...',
-        ];
-        */
-        $version = 'v3'; //per default
+    //     /*
+    //     You can use directly authorization header instead of client_id and client_secret
+    //     $credentials = [
+    //         'authorization_header' => 'Basic xxx...',
+    //     ];
+    //     */
+    //     $version = 'v3'; //per default
 
-        $sms = new OrangeSDK($credentials);
-        $data = $sms->message('Hello World!', $version)
-            ->from(221771440292)       // Sender phone's number
-            ->as('Senschool')      // Sender's name (optional)
-            ->to(221771440291)      // Recipiant phone's number 773022150 778538538
-            ->send();
-            return response()->json($data, '200');
-    }
+    //     $sms = new OrangeSDK($credentials);
+    //     $data = $sms->message('Hello World!', $version)
+    //         ->from(221771440292)       // Sender phone's number
+    //         ->as('Senschool')      // Sender's name (optional)
+    //         ->to(221771440291)      // Recipiant phone's number 773022150 778538538
+    //         ->send();
+    //         return response()->json($data, '200');
+    // }
 }
