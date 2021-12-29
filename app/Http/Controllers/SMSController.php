@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use \Osms\Osms;
+//use \Osms\Osms;
+
+use App\Services\OsmsBabs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 
@@ -14,7 +16,7 @@ class SMSController extends Controller
             'clientSecret' => Config::get('orange-sms.myClientSecret')
         );
 
-        $osms = new Osms($config);
+        $osms = new OsmsBabs($config);
         // retrieve an access token
         $response = $osms->getTokenFromConsumerKey();
 
