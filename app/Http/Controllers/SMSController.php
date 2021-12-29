@@ -37,6 +37,10 @@ class SMSController extends Controller
         }
     }
 
+    public function babs(){
+        return response('baba successfully', 200);
+    }
+
     // public function send(){
     //     //Send SMS
     //     $credentials = [

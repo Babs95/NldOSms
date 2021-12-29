@@ -29,4 +29,5 @@ Route::group([
 ], function ($router) {
         Route::post('send-sms','SMSController@sendSMSOrange');
         Route::get('send-sms2','SMSController@send');
+        Route::get('baba','SMSController@babs');
     });
