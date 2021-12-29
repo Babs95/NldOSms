@@ -18,8 +18,6 @@ class SMSController extends Controller
         // retrieve an access token
         $response = $osms->getTokenFromConsumerKey();
 
-        //$contenMessageNld =""
-
         //echo"request".$request->get('tel');
         //echo"request".$request->get('message');
 
